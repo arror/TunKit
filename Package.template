@@ -9,7 +9,7 @@ let package = Package(
   ],
   targets: [
     .binaryTarget(
-      name: "XrayKit",
+      name: "TunKit",
       url: "https://github.com/arror/TunKit/releases/download/VERSION/TunKit.xcframework.zip",
       checksum: "CHECKSUM"
     )
