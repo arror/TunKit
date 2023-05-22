@@ -41,6 +41,8 @@ jobs:
         run: |
           export TEMP=`shasum -a 256 tun/TunKit.xcframework.zip`
           export CHECKSUM=${TEMP:0:64}
+          pwd
+          ls -l
           cd Templates
           sed -i "_bak" "s/VERSION/${{ github.event.inputs.version }}/g" Package.template
           sed -i "_bak" "s/CHECKSUM/${CHECKSUM}/g" Package.template
