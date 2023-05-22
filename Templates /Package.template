@@ -1,0 +1,17 @@
+// swift-tools-version: 5.7
+import PackageDescription
+
+let package = Package(
+  name: "TunKit",
+  platforms: [.macOS(.v12)],
+  products: [
+    .library(name: "TunKit", targets: ["TunKit"])
+  ],
+  targets: [
+    .binaryTarget(
+      name: "XrayKit",
+      url: "https://github.com/arror/TunKit/releases/download/VERSION/TunKit.xcframework.zip",
+      checksum: "CHECKSUM"
+    )
+  ]
+)
