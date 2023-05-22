@@ -41,13 +41,13 @@ jobs:
         run: |
           export TEMP=`shasum -a 256 tun/TunKit.xcframework.zip`
           export CHECKSUM=${TEMP:0:64}
-          sed -i "_bak" "s/VERSION/${{ github.event.inputs.version }}/g" ./Templates/Package.template
-          sed -i "_bak" "s/CHECKSUM/${CHECKSUM}/g" /Templates/Package.template
+          sed -i "_bak" "s/VERSION/${{ github.event.inputs.version }}/g" Package.template
+          sed -i "_bak" "s/CHECKSUM/${CHECKSUM}/g" Package.template
           
       - name: Update Package.swift
         run: |
           rm -f Package.swift
-          cp ./Templates/Package.template Package.swift
+          cp Package.template Package.swift
           
       - uses: stefanzweifel/git-auto-commit-action@v4
         with:
