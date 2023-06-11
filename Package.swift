@@ -10,8 +10,8 @@ let package = Package(
   targets: [
     .binaryTarget(
       name: "TunKit",
-      url: "https://github.com/arror/TunKit/releases/download/0.0.8/TunKit.xcframework.zip",
-      checksum: "73799abe5143913c93b1da7735c75c6e2ff637e1338fd4292072d656273f182f"
+      url: "https://github.com/arror/TunKit/releases/download/0.0.9/TunKit.xcframework.zip",
+      checksum: "a0e051f7519021a738a2b9831685b169b48e7ee0cada3c6985f9b52e3dfb9493"
     )
   ]
 )
